@@ -1,7 +1,7 @@
 //  Library
 import { RouterContext } from 'https://deno.land/x/oak/mod.ts'
 import * as services from '../services/user.ts'
-import respond from '../helpers/response.ts'
+import respond from '../helpers/respond.ts'
 import type { User } from '../models/user.ts'
 
 //  GET USERS
