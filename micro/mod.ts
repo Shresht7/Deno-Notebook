@@ -1,6 +1,7 @@
 //  Library
 import { serve } from 'https://deno.land/std@0.121.0/http/server.ts'
 import { parse } from 'https://deno.land/std@0.121.0/flags/mod.ts'
+import { join } from 'https://deno.land/std@0.121.0/path/mod.ts'
 
 //  Parse arguments
 const args = parse(Deno.args, {
@@ -12,11 +13,11 @@ const args = parse(Deno.args, {
     }
 })
 
-const { port, _: rest } = args
+const { port, _ } = args
 
 //  Get handlerPath from arguments
-const handlerPath = await Deno.realPath(rest[0].toString())
-const { handler } = await import('file:\\' + handlerPath)
+const handlerPath = args._?.[0] || join(Deno.cwd(), 'index.ts')
+const { handler } = await import('file:\\' + await Deno.realPath(handlerPath.toString()))
 if (typeof handler !== 'function') {
     throw Error('Please provider a handler function with a named export')
 }
