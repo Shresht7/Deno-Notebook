@@ -10,3 +10,4 @@ https://deno.land/
 - [Deno by Example](https://examples.deno.land/)
 - [API Reference](https://doc.deno.land/deno/stable)
 - [Third Party Modules](https://deno.land/x)
+- [Awesome-Deno](https://github.com/denolib/awesome-deno)
