@@ -1,3 +1,3 @@
-import jason from './test.json' assert { type: 'json' }
+import jason from "./test.json" assert { type: "json" };
 
-console.log(jason.name, jason.version)
+console.log(jason.name, jason.version);

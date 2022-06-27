@@ -1,4 +1,4 @@
-const watcher = Deno.watchFs('.')
+const watcher = Deno.watchFs(".");
 for await (const event of watcher) {
-    console.log(event)
+  console.log(event);
 }

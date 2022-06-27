@@ -1,1 +1,1 @@
-export default () => crypto.randomUUID()
+export default () => crypto.randomUUID();
